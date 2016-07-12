@@ -50,3 +50,11 @@ set t_Co=256
 
 " Default colorscheme
 colorscheme gruvbox
+
+" Remove annoying "thanks for flying with vim" topic
+"
+function! ResetTitle()
+	    exec "set title t_ts='' t_fs=''"
+	    exec ":!echo -e '\033kbash\033\\'\<CR>"
+endfunction
+au VimLeave * silent call ResetTitle()
