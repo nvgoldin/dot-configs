@@ -1,2 +1,6 @@
 *.log
 spell/*
+*.pyc
+*.pyo
+*.tmp*
+*.mo
