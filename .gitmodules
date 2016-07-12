@@ -1,0 +1,3 @@
+[submodule "bundle/dbtext-vim"]
+	path = bundle/dbtext-vim
+	url = https://github.com/vim-scripts/dbext.vim
