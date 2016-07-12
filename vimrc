@@ -41,12 +41,16 @@ filetype plugin indent on
 
 let g:jedi#use_splits_not_buffers = "left"
 
-" Powerline configs
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-set laststatus=2
-set t_Co=256
+" Try loading Powerline configs
+" if not installed on remote machine ignore
+try
+	python from powerline.vim import setup as powerline_setup
+	python powerline_setup()
+	python del powerline_setup
+	set laststatus=2
+	set t_Co=256
+catch
+endtry
 
 " Default colorscheme
 colorscheme gruvbox
