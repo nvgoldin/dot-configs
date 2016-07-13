@@ -1,3 +1,4 @@
+let cwd = getcwd()
 syntax on
 set ruler
 set number
@@ -10,7 +11,8 @@ setlocal expandtab
 setlocal autoindent
 setlocal smarttab
 setlocal colorcolumn=81
-setlocal shiftround " use multiple of shiftwidth when identing withg < > 
+setlocal shiftround " use multiple of shiftwidth when identing withg < >
+let g:syntastic_python_pylint_args = '--rcfile=/home/ngoldin/.vim/ftplugin/.pylintrc' 
 let python_highlight_all = 1
 let b:python_version_2 = 1
 
