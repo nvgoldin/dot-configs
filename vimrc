@@ -2,6 +2,7 @@
 execute pathogen#infect()
 call pathogen#helptags()
 
+filetype indent plugin on
 " Syntastic configuration
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -37,9 +38,7 @@ set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servernam
 set spellfile=~/.vim/spell/en.utf-8.add
 " Various filetypes which aren't important enoguh to be in a different file
 au BufRead,BufNewFile *.yaml set filetype=ansible
-filetype plugin indent on
-
-let g:jedi#use_splits_not_buffers = "left"
+"let g:jedi#use_splits_not_buffers = "left"
 
 " Try loading Powerline configs
 " if not installed on remote machine ignore

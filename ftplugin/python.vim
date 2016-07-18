@@ -1,20 +1,28 @@
+filetype indent plugin on
 let cwd = getcwd()
 syntax on
 set ruler
 set number
 set showmatch
-setlocal tabstop=4
+set modeline
+setlocal tabstop=8
 setlocal softtabstop=4
 setlocal shiftwidth=4
 setlocal textwidth=80
 setlocal expandtab
-setlocal autoindent
+"setlocal autoindent
 setlocal smarttab
 setlocal colorcolumn=81
 setlocal shiftround " use multiple of shiftwidth when identing withg < >
+
 let g:syntastic_python_pylint_args = '--rcfile=/home/ngoldin/.vim/ftplugin/.pylintrc' 
-let python_highlight_all = 1
-let b:python_version_2 = 1
+let b:python_highlight_all = 1
+let g:jedi#force_py_version = 3
+let b:python_version_3 = 1
+let g:syntastic_python_python_exe = '/usr/bin/python3.5 -m py_compile'
+let g:pymode = 0
+let g:pymode_rope = 0
+let g:syntastic_python_checkers = ['python', 'pylint', 'flake8', 'pyflakes']
 
 
 " Trim all spaces
