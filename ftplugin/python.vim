@@ -22,7 +22,7 @@ let b:python_version_3 = 1
 let g:syntastic_python_python_exe = '/usr/bin/python3.5 -m py_compile'
 let g:pymode = 0
 let g:pymode_rope = 0
-let g:syntastic_python_checkers = ['python', 'pylint', 'flake8', 'pyflakes']
+let g:syntastic_python_checkers = ['python', 'pyflakes', 'pylint']
 
 
 " Trim all spaces
@@ -50,3 +50,9 @@ nnoremap <buffer> <leader>dbp :g/# TODO-REMOVE: BREAKPOINT-AUTODEL  # NOQA/d<CR>
 " remove autowrap
 " remove trailing spaces
 
+" ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsUsePythonVersion = 3
+let g:ultisnips_python_style = "google"
