@@ -61,3 +61,12 @@ function! ResetTitle()
 	    exec ":!echo -e '\033kbash\033\\'\<CR>"
 endfunction
 au VimLeave * silent call ResetTitle()
+
+
+func! DeleteTrailingSpaces()
+	exe "normal mz"
+	%s/\s\+$//ge
+	exe "normal `z"
+endfunc
+
+autocmd BufWrite <buffer> :call DeleteTrailingSpaces()
